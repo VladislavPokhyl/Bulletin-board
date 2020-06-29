@@ -24,7 +24,7 @@ class Q extends Migration
            $table->integer("milage");
            $table->string("region");
            $table->string("city");
-           
+
             $table->timestamps();
         });
         Schema::create('adImages',function(Blueprint $table)
