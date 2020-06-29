@@ -13,6 +13,20 @@ class Q extends Migration
      */
     public function up()
     {
+        Schema::create('ads',function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->integer("userId")->unsigned();
+            $table->string("carBrand");
+            $table->string("carModel");
+           $table->float("carEngine");
+           $table->integer("ownersCount");
+           $table->integer("milage");
+           $table->string("region");
+           $table->string("city");
+           
+            $table->timestamps();
+        });
         Schema::create('adImages',function(Blueprint $table)
         {
             $table->increments('id');
